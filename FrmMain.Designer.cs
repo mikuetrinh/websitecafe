@@ -78,7 +78,7 @@
             pnlSidebar.Controls.Add(btnThongtincanhan);
             pnlSidebar.Dock = DockStyle.Left;
             pnlSidebar.Location = new Point(0, 0);
-            pnlSidebar.Margin = new Padding(5, 5, 5, 5);
+            pnlSidebar.Margin = new Padding(5);
             pnlSidebar.Name = "pnlSidebar";
             pnlSidebar.Size = new Size(390, 1653);
             pnlSidebar.TabIndex = 0;
@@ -90,7 +90,7 @@
             panel1.Controls.Add(btnDangxuatsidebar);
             panel1.Dock = DockStyle.Bottom;
             panel1.Location = new Point(0, 1493);
-            panel1.Margin = new Padding(5, 5, 5, 5);
+            panel1.Margin = new Padding(5);
             panel1.Name = "panel1";
             panel1.Size = new Size(390, 160);
             panel1.TabIndex = 2;
@@ -116,7 +116,7 @@
             btnDangxuatsidebar.Image = Properties.Resources.Container__12_;
             btnDangxuatsidebar.ImageAlign = ContentAlignment.MiddleLeft;
             btnDangxuatsidebar.Location = new Point(20, 32);
-            btnDangxuatsidebar.Margin = new Padding(5, 5, 5, 5);
+            btnDangxuatsidebar.Margin = new Padding(5);
             btnDangxuatsidebar.Name = "btnDangxuatsidebar";
             btnDangxuatsidebar.Padding = new Padding(24, 0, 0, 0);
             btnDangxuatsidebar.Size = new Size(232, 54);
@@ -144,7 +144,7 @@
             flowLayoutPanel1.Dock = DockStyle.Top;
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(0, 112);
-            flowLayoutPanel1.Margin = new Padding(5, 5, 5, 5);
+            flowLayoutPanel1.Margin = new Padding(5);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(390, 1102);
             flowLayoutPanel1.TabIndex = 1;
@@ -159,7 +159,7 @@
             btnSodoban.Image = Properties.Resources.Container__1_;
             btnSodoban.ImageAlign = ContentAlignment.MiddleLeft;
             btnSodoban.Location = new Point(5, 5);
-            btnSodoban.Margin = new Padding(5, 5, 5, 5);
+            btnSodoban.Margin = new Padding(5);
             btnSodoban.Name = "btnSodoban";
             btnSodoban.Padding = new Padding(24, 0, 0, 0);
             btnSodoban.Size = new Size(380, 72);
@@ -178,7 +178,7 @@
             btnBanhang.Image = Properties.Resources.Icon;
             btnBanhang.ImageAlign = ContentAlignment.MiddleLeft;
             btnBanhang.Location = new Point(5, 87);
-            btnBanhang.Margin = new Padding(5, 5, 5, 5);
+            btnBanhang.Margin = new Padding(5);
             btnBanhang.Name = "btnBanhang";
             btnBanhang.Padding = new Padding(24, 0, 0, 0);
             btnBanhang.Size = new Size(380, 72);
@@ -197,7 +197,7 @@
             btnDonhang.Image = Properties.Resources.Container__2_;
             btnDonhang.ImageAlign = ContentAlignment.MiddleLeft;
             btnDonhang.Location = new Point(5, 169);
-            btnDonhang.Margin = new Padding(5, 5, 5, 5);
+            btnDonhang.Margin = new Padding(5);
             btnDonhang.Name = "btnDonhang";
             btnDonhang.Padding = new Padding(24, 0, 0, 0);
             btnDonhang.Size = new Size(380, 72);
@@ -216,7 +216,7 @@
             btnHoadon.Image = Properties.Resources.Container__3_;
             btnHoadon.ImageAlign = ContentAlignment.MiddleLeft;
             btnHoadon.Location = new Point(5, 251);
-            btnHoadon.Margin = new Padding(5, 5, 5, 5);
+            btnHoadon.Margin = new Padding(5);
             btnHoadon.Name = "btnHoadon";
             btnHoadon.Padding = new Padding(24, 0, 0, 0);
             btnHoadon.Size = new Size(380, 72);
@@ -235,7 +235,7 @@
             btnQuanlymon.Image = Properties.Resources.Container__4_;
             btnQuanlymon.ImageAlign = ContentAlignment.MiddleLeft;
             btnQuanlymon.Location = new Point(5, 333);
-            btnQuanlymon.Margin = new Padding(5, 5, 5, 5);
+            btnQuanlymon.Margin = new Padding(5);
             btnQuanlymon.Name = "btnQuanlymon";
             btnQuanlymon.Padding = new Padding(24, 0, 0, 0);
             btnQuanlymon.Size = new Size(380, 72);
@@ -254,7 +254,7 @@
             btnDanhmuc.Image = Properties.Resources.Container__5_;
             btnDanhmuc.ImageAlign = ContentAlignment.MiddleLeft;
             btnDanhmuc.Location = new Point(5, 415);
-            btnDanhmuc.Margin = new Padding(5, 5, 5, 5);
+            btnDanhmuc.Margin = new Padding(5);
             btnDanhmuc.Name = "btnDanhmuc";
             btnDanhmuc.Padding = new Padding(24, 0, 0, 0);
             btnDanhmuc.Size = new Size(380, 72);
@@ -273,7 +273,7 @@
             btnNguyenlieukho.Image = Properties.Resources.Container__6_;
             btnNguyenlieukho.ImageAlign = ContentAlignment.MiddleLeft;
             btnNguyenlieukho.Location = new Point(5, 497);
-            btnNguyenlieukho.Margin = new Padding(5, 5, 5, 5);
+            btnNguyenlieukho.Margin = new Padding(5);
             btnNguyenlieukho.Name = "btnNguyenlieukho";
             btnNguyenlieukho.Padding = new Padding(24, 0, 0, 0);
             btnNguyenlieukho.Size = new Size(380, 72);
@@ -292,7 +292,7 @@
             btnVoucher.Image = Properties.Resources.Container__7_;
             btnVoucher.ImageAlign = ContentAlignment.MiddleLeft;
             btnVoucher.Location = new Point(5, 579);
-            btnVoucher.Margin = new Padding(5, 5, 5, 5);
+            btnVoucher.Margin = new Padding(5);
             btnVoucher.Name = "btnVoucher";
             btnVoucher.Padding = new Padding(24, 0, 0, 0);
             btnVoucher.Size = new Size(380, 72);
@@ -311,7 +311,7 @@
             btnQuanlynhanvien.Image = Properties.Resources.Container__8_;
             btnQuanlynhanvien.ImageAlign = ContentAlignment.MiddleLeft;
             btnQuanlynhanvien.Location = new Point(5, 661);
-            btnQuanlynhanvien.Margin = new Padding(5, 5, 5, 5);
+            btnQuanlynhanvien.Margin = new Padding(5);
             btnQuanlynhanvien.Name = "btnQuanlynhanvien";
             btnQuanlynhanvien.Padding = new Padding(24, 0, 0, 0);
             btnQuanlynhanvien.Size = new Size(380, 72);
@@ -331,7 +331,7 @@
             btnXepca.Image = Properties.Resources.Icon__1_;
             btnXepca.ImageAlign = ContentAlignment.MiddleLeft;
             btnXepca.Location = new Point(5, 743);
-            btnXepca.Margin = new Padding(5, 5, 5, 5);
+            btnXepca.Margin = new Padding(5);
             btnXepca.Name = "btnXepca";
             btnXepca.Padding = new Padding(24, 0, 0, 0);
             btnXepca.Size = new Size(380, 72);
@@ -350,7 +350,7 @@
             btnLichlam.Image = Properties.Resources.Container__9_;
             btnLichlam.ImageAlign = ContentAlignment.MiddleLeft;
             btnLichlam.Location = new Point(5, 825);
-            btnLichlam.Margin = new Padding(5, 5, 5, 5);
+            btnLichlam.Margin = new Padding(5);
             btnLichlam.Name = "btnLichlam";
             btnLichlam.Padding = new Padding(24, 0, 0, 0);
             btnLichlam.Size = new Size(380, 72);
@@ -369,7 +369,7 @@
             btnQuanlyban.Image = Properties.Resources.Container__10_;
             btnQuanlyban.ImageAlign = ContentAlignment.MiddleLeft;
             btnQuanlyban.Location = new Point(5, 907);
-            btnQuanlyban.Margin = new Padding(5, 5, 5, 5);
+            btnQuanlyban.Margin = new Padding(5);
             btnQuanlyban.Name = "btnQuanlyban";
             btnQuanlyban.Padding = new Padding(24, 0, 0, 0);
             btnQuanlyban.Size = new Size(380, 72);
@@ -388,7 +388,7 @@
             btnBaocao.Image = Properties.Resources.Container__11_;
             btnBaocao.ImageAlign = ContentAlignment.MiddleLeft;
             btnBaocao.Location = new Point(5, 989);
-            btnBaocao.Margin = new Padding(5, 5, 5, 5);
+            btnBaocao.Margin = new Padding(5);
             btnBaocao.Name = "btnBaocao";
             btnBaocao.Padding = new Padding(24, 0, 0, 0);
             btnBaocao.Size = new Size(380, 72);
@@ -405,7 +405,7 @@
             pnlLogo.Controls.Add(lbLogo1);
             pnlLogo.Dock = DockStyle.Top;
             pnlLogo.Location = new Point(0, 0);
-            pnlLogo.Margin = new Padding(5, 5, 5, 5);
+            pnlLogo.Margin = new Padding(5);
             pnlLogo.Name = "pnlLogo";
             pnlLogo.Size = new Size(390, 112);
             pnlLogo.TabIndex = 0;
@@ -414,7 +414,7 @@
             // 
             picLogo.Image = Properties.Resources.Background;
             picLogo.Location = new Point(23, 22);
-            picLogo.Margin = new Padding(5, 5, 5, 5);
+            picLogo.Margin = new Padding(5);
             picLogo.Name = "picLogo";
             picLogo.Size = new Size(67, 70);
             picLogo.TabIndex = 2;
@@ -472,7 +472,7 @@
             pnlTopbar.Controls.Add(picLogotopbar);
             pnlTopbar.Dock = DockStyle.Top;
             pnlTopbar.Location = new Point(390, 0);
-            pnlTopbar.Margin = new Padding(5, 5, 5, 5);
+            pnlTopbar.Margin = new Padding(5);
             pnlTopbar.Name = "pnlTopbar";
             pnlTopbar.Size = new Size(2494, 112);
             pnlTopbar.TabIndex = 1;
@@ -507,7 +507,7 @@
             picAvttopbar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             picAvttopbar.Image = Properties.Resources.Background__1_;
             picAvttopbar.Location = new Point(2377, 19);
-            picAvttopbar.Margin = new Padding(5, 5, 5, 5);
+            picAvttopbar.Margin = new Padding(5);
             picAvttopbar.Name = "picAvttopbar";
             picAvttopbar.Size = new Size(98, 74);
             picAvttopbar.SizeMode = PictureBoxSizeMode.Zoom;
@@ -530,7 +530,7 @@
             // 
             picLogotopbar.Image = Properties.Resources.LLTQ_Café_Logo;
             picLogotopbar.Location = new Point(15, 22);
-            picLogotopbar.Margin = new Padding(5, 5, 5, 5);
+            picLogotopbar.Margin = new Padding(5);
             picLogotopbar.Name = "picLogotopbar";
             picLogotopbar.Size = new Size(81, 74);
             picLogotopbar.SizeMode = PictureBoxSizeMode.Zoom;
@@ -541,7 +541,7 @@
             // 
             pnlContent.Dock = DockStyle.Fill;
             pnlContent.Location = new Point(390, 112);
-            pnlContent.Margin = new Padding(5, 5, 5, 5);
+            pnlContent.Margin = new Padding(5);
             pnlContent.Name = "pnlContent";
             pnlContent.Size = new Size(2494, 1541);
             pnlContent.TabIndex = 2;
@@ -555,7 +555,7 @@
             Controls.Add(pnlContent);
             Controls.Add(pnlTopbar);
             Controls.Add(pnlSidebar);
-            Margin = new Padding(5, 5, 5, 5);
+            Margin = new Padding(5);
             Name = "FrmMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "LTTQ Cafe";

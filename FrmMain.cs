@@ -2,97 +2,106 @@ namespace DoAnLapTrinhTrucQuan
 {
     public partial class FrmMain : Form
     {
-        private readonly UcAccount accountControl;
+        private A03Personalinfo? profileControl;
+        private string  currentUsername;
 
-        public FrmMain()
+        public FrmMain(string username)
         {
             InitializeComponent();
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            MaximizeBox = false;
-            WindowState = FormWindowState.Normal;
-            ClientSize = new Size(1280, 720);
 
-            flowLayoutPanel1.Dock = DockStyle.None;
+            currentUsername     = username;
+            WindowState         = FormWindowState.Maximized;
+
+            // Show username in topbar
+            lbTentopbar.Text    = username;
+
+            // Layout helpers
+            flowLayoutPanel1.Dock       = DockStyle.None;
             flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnThongtincanhan.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            flowLayoutPanel1.Anchor     = AnchorStyles.Top | AnchorStyles.Bottom |
+                                          AnchorStyles.Left | AnchorStyles.Right;
+            btnThongtincanhan.Anchor    = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+
             pnlSidebar.Resize += (_, _) => LayoutSidebar();
-            pnlTopbar.Resize += (_, _) => LayoutTopbar();
+            pnlTopbar.Resize  += (_, _) => LayoutTopbar();
             LayoutSidebar();
             LayoutTopbar();
 
-            accountControl = new UcAccount();
-            accountControl.LoginSucceeded += OnLoginSucceeded;
-            accountControl.ProfileUpdated += (name, _) => lbTentopbar.Text = name;
-            btnThongtincanhan.Click += (_, _) => ShowProfile();
-            btnDangxuatsidebar.Click += (_, _) => ShowLogin();
-
-            pnlSidebar.Visible = false;
-            pnlTopbar.Visible = false;
-            pnlContent.Visible = false;
-            Controls.Add(accountControl);
-            accountControl.Dock = DockStyle.Fill;
-            accountControl.BringToFront();
+            // Sidebar navigation
+            btnThongtincanhan.Click    += (_, _) => ShowProfile();
+            btnDangxuatsidebar.Click   += (_, _) => ConfirmLogout();
+            btnQuanlynhanvien.Click    += btnQuanlynhanvien_Click;
         }
 
-        private void OnLoginSucceeded(string email)
+        // ── Load profile panel ──────────────────────────────────────────
+        private void ShowProfile()
         {
-            lbTentopbar.Text = accountControl.DisplayName;
-            pnlSidebar.Visible = true;
-            pnlTopbar.Visible = true;
-            pnlContent.Visible = true;
-            accountControl.ShowProfile();
-            LoadControl(accountControl);
+            if (profileControl == null)
+            {
+                profileControl = new A03Personalinfo();
+                profileControl.ProfileUpdated += (name, _) =>
+                {
+                    lbTentopbar.Text = name;
+                    currentUsername  = name;
+                };
+            }
+            LoadControl(profileControl);
         }
 
+        // ── Logout ──────────────────────────────────────────────────────
+        private void ConfirmLogout()
+        {
+            var result = MessageBox.Show(
+                "Bạn có muốn đăng xuất không?",
+                "Xác nhận đăng xuất",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Restart();
+            }
+        }
+
+        // ── Layout helpers ───────────────────────────────────────────────
         private void LayoutSidebar()
         {
-            const int navigationItemHeight = 51;
+            const int navItemHeight = 51;
             flowLayoutPanel1.Location = new Point(0, pnlLogo.Height);
             flowLayoutPanel1.Size = new Size(
                 pnlSidebar.ClientSize.Width,
-                Math.Max(0, pnlSidebar.ClientSize.Height - pnlLogo.Height - panel1.Height - btnThongtincanhan.Height));
+                Math.Max(0, pnlSidebar.ClientSize.Height
+                    - pnlLogo.Height
+                    - panel1.Height
+                    - btnThongtincanhan.Height));
             btnThongtincanhan.Location = new Point(
                 0,
                 pnlSidebar.ClientSize.Height - panel1.Height - btnThongtincanhan.Height);
             btnThongtincanhan.Width = pnlSidebar.ClientSize.Width;
-            flowLayoutPanel1.AutoScrollMinSize = new Size(0, flowLayoutPanel1.Controls.Count * navigationItemHeight);
+            flowLayoutPanel1.AutoScrollMinSize =
+                new Size(0, flowLayoutPanel1.Controls.Count * navItemHeight);
         }
 
         private void LayoutTopbar()
         {
-            int rightInset = 16;
-            picAvttopbar.Location = new Point(pnlTopbar.ClientSize.Width - picAvttopbar.Width - rightInset, 12);
-            lbTentopbar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            lbTentopbar.AutoSize = false;
+            const int rightInset = 16;
+            picAvttopbar.Location = new Point(
+                pnlTopbar.ClientSize.Width - picAvttopbar.Width - rightInset, 12);
+
+            lbTentopbar.Anchor    = AnchorStyles.Top | AnchorStyles.Right;
+            lbTentopbar.AutoSize  = false;
             lbTentopbar.TextAlign = ContentAlignment.MiddleRight;
-            lbTentopbar.Size = new Size(160, 26);
-            lbTentopbar.Location = new Point(picAvttopbar.Left - lbTentopbar.Width - 12, 6);
-            lbRoletopbar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            lbRoletopbar.AutoSize = false;
+            lbTentopbar.Size      = new Size(160, 26);
+            lbTentopbar.Location  = new Point(picAvttopbar.Left - lbTentopbar.Width - 12, 6);
+
+            lbRoletopbar.Anchor    = AnchorStyles.Top | AnchorStyles.Right;
+            lbRoletopbar.AutoSize  = false;
             lbRoletopbar.TextAlign = ContentAlignment.MiddleRight;
-            lbRoletopbar.Size = new Size(160, 26);
-            lbRoletopbar.Location = new Point(picAvttopbar.Left - lbRoletopbar.Width - 12, 34);
+            lbRoletopbar.Size      = new Size(160, 26);
+            lbRoletopbar.Location  = new Point(picAvttopbar.Left - lbRoletopbar.Width - 12, 34);
         }
 
-        private void ShowProfile()
-        {
-            accountControl.ShowProfile();
-            LoadControl(accountControl);
-        }
-
-        private void ShowLogin()
-        {
-            pnlContent.Controls.Clear();
-            pnlSidebar.Visible = false;
-            pnlTopbar.Visible = false;
-            pnlContent.Visible = false;
-            accountControl.ShowLogin();
-            Controls.Add(accountControl);
-            accountControl.Dock = DockStyle.Fill;
-            accountControl.BringToFront();
-        }
-
+        // ── Load UserControl into content panel ──────────────────────────
         private void LoadControl(UserControl uc)
         {
             pnlContent.Controls.Clear();
@@ -100,6 +109,7 @@ namespace DoAnLapTrinhTrucQuan
             pnlContent.Controls.Add(uc);
         }
 
+        // ── Sidebar click handlers ───────────────────────────────────────
         private void btnQuanlynhanvien_Click(object sender, EventArgs e)
         {
             LoadControl(new UcM05());

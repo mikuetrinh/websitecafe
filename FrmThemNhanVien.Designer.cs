@@ -153,7 +153,7 @@
             lbPhu.ForeColor = Color.FromArgb(62, 39, 35);
             lbPhu.Location = new Point(110, 64);
             lbPhu.Name = "lbPhu";
-            lbPhu.Size = new Size(287, 20);
+            lbPhu.Size = new Size(470, 32);
             lbPhu.TabIndex = 1;
             lbPhu.Text = "Điền thông tin để thêm hồ sơ và tài khoản";
             // 
@@ -164,7 +164,7 @@
             lbTieude.ForeColor = Color.FromArgb(62, 39, 35);
             lbTieude.Location = new Point(110, 23);
             lbTieude.Name = "lbTieude";
-            lbTieude.Size = new Size(238, 32);
+            lbTieude.Size = new Size(373, 51);
             lbTieude.TabIndex = 0;
             lbTieude.Text = "Thêm nhân viên mới";
             // 
@@ -257,7 +257,7 @@
             tbManv.Location = new Point(3, 45);
             tbManv.Name = "tbManv";
             tbManv.ReadOnly = true;
-            tbManv.Size = new Size(282, 32);
+            tbManv.Size = new Size(282, 47);
             tbManv.TabIndex = 7;
             // 
             // dateTimePicker1
@@ -268,7 +268,7 @@
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.Location = new Point(291, 45);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(282, 32);
+            dateTimePicker1.Size = new Size(282, 47);
             dateTimePicker1.TabIndex = 8;
             // 
             // label1
@@ -305,7 +305,7 @@
             tbHoten.Margin = new Padding(0);
             tbHoten.Name = "tbHoten";
             tbHoten.PlaceholderText = "Nhập họ và tên";
-            tbHoten.Size = new Size(570, 36);
+            tbHoten.Size = new Size(570, 54);
             tbHoten.TabIndex = 9;
             // 
             // label2
@@ -331,7 +331,7 @@
             tbSDT.Margin = new Padding(3, 4, 3, 4);
             tbSDT.Name = "tbSDT";
             tbSDT.PlaceholderText = "09xx xxx xxx";
-            tbSDT.Size = new Size(570, 32);
+            tbSDT.Size = new Size(570, 47);
             tbSDT.TabIndex = 10;
             // 
             // label3
@@ -357,7 +357,7 @@
             textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "ten@moccafe.vn";
-            textBox1.Size = new Size(570, 32);
+            textBox1.Size = new Size(570, 47);
             textBox1.TabIndex = 11;
             // 
             // lbVaitro
@@ -382,7 +382,7 @@
             cbVaitro.Items.AddRange(new object[] { "Nhân viên", "Quản lý" });
             cbVaitro.Location = new Point(3, 385);
             cbVaitro.Name = "cbVaitro";
-            cbVaitro.Size = new Size(570, 36);
+            cbVaitro.Size = new Size(570, 53);
             cbVaitro.TabIndex = 13;
             // 
             // lbTaikhoanbaomat
@@ -444,7 +444,7 @@
             tbTendangnhap.Margin = new Padding(0);
             tbTendangnhap.Name = "tbTendangnhap";
             tbTendangnhap.PlaceholderText = "vd: hung.nv";
-            tbTendangnhap.Size = new Size(282, 32);
+            tbTendangnhap.Size = new Size(282, 47);
             tbTendangnhap.TabIndex = 17;
             // 
             // pnlPassword
@@ -468,7 +468,7 @@
             tbMatkhau.Name = "tbMatkhau";
             tbMatkhau.PasswordChar = '●';
             tbMatkhau.PlaceholderText = "Tối thiểu 6 ký tự";
-            tbMatkhau.Size = new Size(282, 32);
+            tbMatkhau.Size = new Size(282, 47);
             tbMatkhau.TabIndex = 18;
             // 
             // pnlSDT
@@ -493,7 +493,7 @@
             // 
             // FrmThemNhanVien
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(16F, 40F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(632, 800);

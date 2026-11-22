@@ -3,15 +3,25 @@ namespace DoAnLapTrinhTrucQuan
     internal static class Program
     {
         /// <summary>
-        ///  The main entry point for the application.
+        /// The main entry point for the application.
+        /// Shows A01Login first; on successful login opens FrmMain.
         /// </summary>
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FrmMain());
+
+            // Run login dialog; A01Login must set DialogResult = OK and
+            // expose LoggedInUsername when login succeeds.
+            var login = new A01Login();
+            var result = login.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                Application.Run(new FrmMain(login.LoggedInUsername));
+            }
+            // If the user closes the login dialog without logging in,
+            // the application simply exits.
         }
     }
 }
